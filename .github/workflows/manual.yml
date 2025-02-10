@@ -36,7 +36,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Deploy bot
         run: |
-          python run.py --no-update-check &
+          python run.py --no-checks &
           sleep 21600 # Giữ bot hoạt động trong 3600 giây (1 giờ)
         env:
           MUSICBOT_TOKEN: ${{ secrets.MUSICBOT_TOKEN }}
